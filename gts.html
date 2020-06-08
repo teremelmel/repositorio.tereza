@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> CLASE 28.05 </title>
+</head>
+<body>
+    nro 1
+    <input type="number" name="num1" id="num1" onchange="alerta1()"/>
+    <small id="mensaje" style="color: orange;"></small>
+    <br/>
+    
+    nro 2
+    <input type="number" name="num2" id="num2"/><br/>
+    <button onclick="ejecutar()"> CALCULAR </button>
+
+    <p id="resultado"> </p>
+
+</body>
+<script>
+    function multiplicacion(a,b) {
+        var resultado = a * b;
+        console.log ("el resultado es: " + resultado);
+        return resultado;
+    };
+
+    function ejecutar() {
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+   
+    var accion = multiplicacion(num1, num2);
+    document.getElementById("resultado").innerHTML = accion;
+    };
+
+    function alerta1(){
+        document.getElementById("mensaje").innerHTML = "A CAMCIADO DE NUMERO";
+    }
+</script>
+</html>
